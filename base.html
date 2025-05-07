@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }} ">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+        <nav>
+            <a href="/">Sākums</a>
+            <a href="/produkti">Produkti</a>
+            <a href="/par-mums">Par mums</a>
+        </nav>
+    </header>
+
+    </main>
+
+       <!-- Main content of the page -->
+       {% block content %}
+       {% endblock %}
+       </body>
+
+
+    <footer>
+        <p>&copy; 2025 Silky Soaps</p>
+    </footer>
+</body>
+
+</html>

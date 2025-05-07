@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Product - Silky Soaps{% endblock %}
+
+{% block content %}
+    <h1>Edit Product</h1>
+
+    <form action="/products/edit/{{ product['id'] }}" method="POST">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" value="{{ product['name'] }}" required>
+    
+        <label for="price">Price (€):</label>
+        <input type="number" id="price" name="price" value="{{ product['price'] }}" required>
+    
+        <label for="scent">Scent:</label>
+        <input type="text" id="scent" name="scent" value="{{ product['scent'] }}">
+    
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" value="{{ product['color'] }}">
+    
+        <label for="stock">Stock Quantity:</label>
+        <input type="number" id="stock" name="stock" value="{{ product['stock'] }}">
+    
+        <label for="properties">Properties:</label>
+        <input type="text" id="properties" name="properties" value="{{ product['properties'] }}">
+    
+        <label for="ingredients">Ingredients:</label>
+        <input type="text" id="ingredients" name="ingredients" value="{{ product['ingredients'] }}">
+    
+        <button type="submit">Update Product</button>
+    </form>
+    
+{% endblock %}
